@@ -1,0 +1,31 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+void print(int arr[],int n){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
+void shiftNegative(int arr[], int n){
+    int j=0;
+    int size =n-1;
+    
+  for(int i=0;i<n;i++){
+      if(arr[i] < 0){
+         swap(arr[j],arr[i]); 
+         j++;
+      }
+  }
+  
+}
+
+int main() {
+    
+    int arr[5] = {45,8,-5 , -4 , -8};
+    int n = 5;
+    shiftNegative(arr,n);
+    print(arr,n);
+    return 0;
+}
